@@ -38,19 +38,26 @@ app.use(express.static(__dirname+'/public'));
 app.get('/',(req,res)=>{
     res.render('home.hbs',{
         pageTitle:"Home Page",
-        welcomeHomeMessage:"Welcome to my website",
+        welcomeHomeMessage:"Welcome to my website"
     });
 });
 app.get('/about',(req,res)=>{
     res.render('about.hbs',{
-        pageTitle:"About Page",
+        pageTitle:"About Page"
+    });
+});
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle:"Projects Page",
+        welcomeHomeMessage:"Welcome to Projects Page"
     });
 });
 app.get('/bad',(req,res)=>{
     res.send({
         errorMessage:'Unable to handle request'
     });
-})
+});
+
 
 app.listen(port,()=>{
     console.log(`Server is up on ${port}`);

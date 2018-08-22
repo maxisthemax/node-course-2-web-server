@@ -26,12 +26,12 @@ app.use((req,res,next)=>{
     });
     next();
 });
-app.use((req,res,next)=>{
-    res.render('maintenance.hbs',{
-        welcomeHomeMessage:"We'll be right back",
-        comment:"The site is being updated"
-    })
-});
+// app.use((req,res,next)=>{
+//     res.render('maintenance.hbs',{
+//         welcomeHomeMessage:"We'll be right back",
+//         comment:"The site is being updated"
+//     })
+// });
 app.use(express.static(__dirname+'/public'));
 
 
